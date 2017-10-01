@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+eureka:
+  instance:
+    hostname: http://localhost:9091
