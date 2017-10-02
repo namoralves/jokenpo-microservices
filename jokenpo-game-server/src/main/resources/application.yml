@@ -1,6 +1,7 @@
-server:
-  port: 8080
-
-eureka:
-  instance:
-    hostname: http://localhost:9091
+spring:
+  messages:
+    basename: i18n/messages
+    cache-seconds: 3600
+    encoding: ISO-8859-1
+  mvc:
+    throw-exception-if-no-handler-found: true
