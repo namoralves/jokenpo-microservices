@@ -41,9 +41,9 @@ public class ResultMatch implements Serializable {
     @Override
     public String toString() {
         StringBuilder strBuilder = new StringBuilder();
-        strBuilder.append("Jogada do " + play1.getName() + ": " + play1.getSelectedPlayEnum().toString() + "\n");
-        strBuilder.append("Jogada do " + play2.getName() + ": " + play2.getSelectedPlayEnum().toString() + "\n");
-        strBuilder.append("\nRESULTADO: ");
+        strBuilder.append("Jogada do " + play1.getName() + ": " + play1.getSelectedPlayEnum().toString() + "<br />");
+        strBuilder.append("Jogada do " + play2.getName() + ": " + play2.getSelectedPlayEnum().toString() + "<br />");
+        strBuilder.append("<br />RESULTADO: ");
         if (this.winner == null) {
             strBuilder.append("EMPATE");
         } else {
