@@ -9,8 +9,9 @@ public class GameService {
 
     public ResultMatch calculateWinner(Player player1, Player player2) {
         Player winner = getWinner(player1, player2);
+        ResultMatch resultMatch = new ResultMatch(player1, player2, winner, false);
+        resultMatch.setDraw(winner == null);
 
-        ResultMatch resultMatch = new ResultMatch(player1, player2, winner);
         return resultMatch;
     }
 
@@ -26,4 +27,5 @@ public class GameService {
         // Draw
         return null;
     }
+
 }

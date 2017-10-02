@@ -37,7 +37,7 @@ public class GameController {
 
         ResultMatch resultMatch = this.service.calculateWinner(player1, player2);
 
-        return ResponseEntity.ok(resultMatch.toString());
+        return ResponseEntity.ok(resultMatch);
     }
 
 

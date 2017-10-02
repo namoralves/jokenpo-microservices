@@ -7,11 +7,13 @@ public class ResultMatch implements Serializable {
     private Player play1;
     private Player play2;
     private Player winner;
+    private Boolean draw;
 
-    public ResultMatch(Player play1, Player play2, Player winner) {
+    public ResultMatch(Player play1, Player play2, Player winner, Boolean draw) {
         this.play1 = play1;
         this.play2 = play2;
         this.winner = winner;
+        this.draw = draw;
     }
 
     public Player getPlay1() {
@@ -38,18 +40,11 @@ public class ResultMatch implements Serializable {
         this.winner = winner;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder strBuilder = new StringBuilder();
-        strBuilder.append("Jogada do " + play1.getName() + ": " + play1.getSelectedPlayEnum().toString() + "<br />");
-        strBuilder.append("Jogada do " + play2.getName() + ": " + play2.getSelectedPlayEnum().toString() + "<br />");
-        strBuilder.append("<br />RESULTADO: ");
-        if (this.winner == null) {
-            strBuilder.append("EMPATE");
-        } else {
-            strBuilder.append(winner.getName() + " VENCEU!");
-        }
+    public Boolean getDraw() {
+        return draw;
+    }
 
-        return strBuilder.toString();
+    public void setDraw(Boolean draw) {
+        this.draw = draw;
     }
 }
