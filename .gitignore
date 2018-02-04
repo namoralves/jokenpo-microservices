@@ -13,5 +13,7 @@ infinitest.filters
 jokenpo-game-service/.idea/
 */*.iml
 *.iml
+**/*.iml
 .env
 .DS_Stor
+*/.idea/*
