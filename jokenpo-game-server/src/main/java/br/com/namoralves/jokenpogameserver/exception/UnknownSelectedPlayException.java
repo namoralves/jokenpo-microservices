@@ -11,7 +11,7 @@ public class UnknownSelectedPlayException extends RuntimeException {
     public UnknownSelectedPlayException(String... parameters) {
         super();
         List<String> listParams = Arrays.asList(parameters);
-        listParams.forEach((p) -> this.params.add(p));
+        listParams.forEach(p -> this.params.add(p));
     }
 
     public String[] getParams() {
